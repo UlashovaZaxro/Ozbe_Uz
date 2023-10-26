@@ -1,19 +1,18 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Tilt+Neon&display=swap');
 * {
     margin: 0;
     padding: 0;
-    list-style: none;
+    /* list-style: none; */
     text-decoration: none;
-    font-family: Montserrat, sans-serif;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
-
-.main_header{
+header{
     position: sticky;
     top: 0;
     z-index: 1001;
-    background: #fff;
+    background-color: #fff;
 }
-
 header .top_header {
     background-color: #334fb4;
     color: #ffff;
@@ -21,6 +20,7 @@ header .top_header {
     display: flex;
     align-items: center;
     justify-content: center;
+   
 }
 
 .top-header-text-one {
@@ -186,7 +186,9 @@ section {
     scrollbar-width: none;
     overflow-x: scroll;
 }
-
+.section-two::-webkit-scrollbar{
+    display: none;
+}
 .header-section-two p {
     padding: 10px 0 0 12%;
     font-size: 2.5rem;
@@ -333,6 +335,11 @@ section {
     scale: 1.3;
     transition: all .3s ease;
 }
+.left-section svg ,
+.right-section svg{
+    transition: all ease .5s;
+    width: 15px;
+}
 .left-section a{
     color: #000;
     letter-spacing: 3px;
@@ -346,21 +353,107 @@ section {
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.left-section:hover .section-three-img img:nth-child(1) {
-    scale: 1.36;
-    transition: all linear .5s;
+.left-section:hover .section-three-img img{
+    transform: scale(1.1);
+    transition: all linear .3s;
     cursor: pointer;
 }
-.right-section:hover .section-three-img img:nth-child(1) {
-    scale: 1.36;
-    transition: all linear .5s;
+.right-section:hover .section-three-img img{
+    transform: scale(1.1);
+    transition: all linear .3s;
     cursor: pointer;
 }
-.right-section:hover .fa-solid {
-    transition: all ease .5s;
+.left-section:hover svg,
+.right-section:hover svg  {
+    transition: all ease .3s;
     transform: translateX(5px);
 }
-.left-section:hover .fa-solid {
-    transition: all ease .5s;
-    transform: translateX(5px);
+.section-four{
+    width: 100%;
+    /* height: 50vh; */
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 4.2rem;
+}
+.header-text{
+    font-size: 18px;
+    font-weight: 100;
+    font-size: "Montserrat", sans-serif;
+    margin-bottom: 1.8rem;
+}
+.text-ozbe{
+    width: 60%;
+    color: #545353;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.btn-ozbe{
+    width: 450px;
+    height: 47px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+    border: 1px soldi #000 ;
+    margin-top: 1.2rem;
+    gap: 1.1rem;
+}
+
+.btn-ozbe a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #000;
+}
+.btn-ozbe a:hover{
+    border: 3px solid #000;
+}
+.btn-ozbe a span{
+    font-weight: 600;
+}
+.future{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.icons{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    font-size: 20px;
+}
+.icons i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.link{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.link ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    list-style:inside;
+}
+.link ul li a{
+    color: #323030;
+    padding: 10px;
 }
