@@ -23,6 +23,3 @@ next.addEventListener('click', () => {
     text2.classList.remove('active');
     text1.style.display = 'block';
 });
-
-
-

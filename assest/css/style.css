@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -7,56 +6,66 @@
     font-family: Montserrat, sans-serif;
     box-sizing: border-box;
 }
+
+.main_header{
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    background: #fff;
+}
+
 header .top_header {
     background-color: #334fb4;
     color: #ffff;
     padding: 10px;
-    position:sticky;
-    top: 0;
-    z-index: 1001;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
-.top-header-text-one{
+
+.top-header-text-one {
     font-size: 14px;
     letter-spacing: 1.5px;
     font-weight: 100;
     display: block;
 }
-.top-header-text-one.active{
+
+.top-header-text-one.active {
     transition: all 0.50s ease-in;
     display: block;
 }
 
-.top-header-text-two{
+.top-header-text-two {
     display: none;
     font-size: 14px;
     letter-spacing: 1.5px;
-    
+
 }
-.top-header-text-two.active{
+
+.top-header-text-two.active {
     display: block;
     transition: all 0.50s ease-in
 }
 
-.top_header span i{
+.top_header span i {
     font-size: 12px;
     color: gray;
     padding: 10px;
     padding-top: 0;
     padding-bottom: 0;
 }
-.prev{
+
+.prev {
     position: absolute;
     left: 35%;
 }
-.next{
+
+.next {
     position: absolute;
-    right:35%;
+    right: 35%;
 }
-.top_header span i:hover{
+
+.top_header span i:hover {
     cursor: pointer;
     scale: 1.2;
     color: #fff;
@@ -111,27 +120,31 @@ header .main_header .nav3 a i:hover {
     transition: all 0.1s ease;
 }
 
-section{
+section {
     width: 100%;
     height: 120vh;
     display: block;
     position: relative;
     overflow: hidden;
-    background :linear-gradient(#323030 #363535);
+    background: linear-gradient(#323030 #363535);
 }
-.parallax{
+
+.parallax {
     width: 100%;
     height: 100%;
     background: url("../img/OZBE.jpg");
     background-position: top;
     background-size: cover;
+    z-index: -99;
 }
-.parallax img{
+
+.parallax img {
     position: absolute;
     top: 0;
-    left: 0;    
+    left: 0;
 }
-.snova-v-igre{
+
+.snova-v-igre {
     position: absolute;
     bottom: 12%;
     left: 50%;
@@ -139,16 +152,18 @@ section{
     display: block;
     text-align: center;
 }
-.snova-v-igre p{
+
+.snova-v-igre p {
     color: #ffff;
     font-size: 52px;
     font-family: Montserrat, sans-serif;
     font-weight: 100;
     margin-bottom: 3%;
 }
-.snova-v-igre button{
+
+.snova-v-igre button {
     width: 122px;
-    height: 47px;   
+    height: 47px;
     padding-left: 30px;
     padding-right: 30px;
     background: transparent;
@@ -157,30 +172,35 @@ section{
     font-size: 1.2rem;
     cursor: pointer;
 }
-.snova-v-igre button:hover{
-    border: 3px solid #fff;;
+
+.snova-v-igre button:hover {
+    border: 3px solid #fff;
+    ;
 }
-.section-two{
+
+.section-two {
     width: 100%;
     height: 100vh;
-    color:#000;
+    color: #000;
     padding: 10px 0 0 12%;
     scrollbar-width: none;
     overflow-x: scroll;
 }
-.header-section-two p{
+
+.header-section-two p {
     padding: 10px 0 0 12%;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     margin-top: 2.5rem;
 }
 
-.box-card{
+.box-card {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(7, 1fr);
 }
-.card{
+
+.card {
     position: relative;
     width: 305px;
     height: 453px;
@@ -189,47 +209,54 @@ section{
     overflow: hidden;
 
 }
- .card img{
+
+.card img {
     width: 100%;
     transition: all linear 0.2s;
     overflow: hidden;
 
-} 
+}
 
-.hover-img{
+.hover-img {
     position: absolute;
     top: 0;
     left: 0%;
     opacity: 0;
     /* display: none; */
 }
-.card:hover .hover-img1{
+
+.card:hover .hover-img1 {
     opacity: 0;
 }
-.cards:hover img.hover-img{
+
+.cards:hover img.hover-img {
     /* display: block; */
     opacity: 1;
     transform: scale(1.08);
     cursor: pointer;
-} 
-.cards{
+}
+
+.cards {
     width: 320px;
     height: auto;
     /* background-color: #323030; */
     display: inline-block;
 }
-.card-content{
+
+.card-content {
     width: 100%;
     color: #000;
-    grid-template-rows: max-content minmax(0,1fr) max-content auto;
+    grid-template-rows: max-content minmax(0, 1fr) max-content auto;
     text-align: center;
 }
-.card-information ,
-.card-price{
+
+.card-information,
+.card-price {
     padding: 0 12px;
 }
+
 .card-information h3,
-.card-information a{
+.card-information a {
     font-size: 15px;
     color: #000;
     font-weight: 100;
@@ -238,7 +265,8 @@ section{
     text-align: left;
     margin-top: 1.2rem;
 }
-.card-price p{
+
+.card-price p {
     line-height: 50px;
     font-size: 18px;
     padding: 0;
@@ -246,7 +274,8 @@ section{
     text-align: left;
 
 }
-.card-content button{
+
+.card-content button {
     width: 90%;
     padding: 10px;
     color: #000;
@@ -255,29 +284,83 @@ section{
     background: transparent;
     border: 1px solid #000;
 }
+
 .cards:hover {
     cursor: pointer;
 }
-.cards:hover .card-information h3 a{
-    text-decoration:underline !important;
+
+.cards:hover .card-information h3 a {
+    text-decoration: underline !important;
 }
-.card-content button:hover{
+
+.card-content button:hover {
     border: 2px solid #000;
 }
-.counter{
-    display: flex;
-    align-items: center;
-    left: 38%;
-    font-size: 14px;
-    position: absolute;
-    top: 0;
+
+.section-three {
+    width: 100%;
+    height: 100vh;
+    padding: 10px 12%;
 }
-.counter i{
-    color: #ccc;
-    font-size: 12px;
+
+.img-sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
 }
-.counter p{
-    color: #8e8d8d;
-    margin-left: 40px;
-    margin-right: 40px;
+
+.section-three h1 {
+    margin-bottom: 1.2rem;
+    font-size: 48px;
+    font-weight: 100;
+}
+
+.left-section {
+    width: 100%;
+    display: block;
+}
+
+.section-three-img {
+    width: 546px;
+    height: 546px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.section-three-img img {
+    width: 100%;
+    height: 100%;
+    scale: 1.3;
+    transition: all .3s ease;
+}
+.left-section a{
+    color: #000;
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.right-section a{
+    color: #000;
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.left-section:hover .section-three-img img:nth-child(1) {
+    scale: 1.36;
+    transition: all linear .5s;
+    cursor: pointer;
+}
+.right-section:hover .section-three-img img:nth-child(1) {
+    scale: 1.36;
+    transition: all linear .5s;
+    cursor: pointer;
+}
+.right-section:hover .fa-solid {
+    transition: all ease .5s;
+    transform: translateX(5px);
+}
+.left-section:hover .fa-solid {
+    transition: all ease .5s;
+    transform: translateX(5px);
 }
