@@ -1,19 +1,73 @@
+
 * {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    box-sizing: border-box;
 }
-
 header .top_header {
     background-color: #334fb4;
     color: #ffff;
+    padding: 10px;
+    position:sticky;
+    top: 0;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.top-header-text-one{
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+    display: block;
+}
+.top-header-text-one.active{
+    transition: all 0.50s ease-in;
+    display: block;
 }
 
+.top-header-text-two{
+    display: none;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    
+}
+.top-header-text-two.active{
+    display: block;
+    transition: all 0.50s ease-in
+}
+
+.top_header span i{
+    font-size: 12px;
+    color: gray;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.prev{
+    position: absolute;
+    left: 35%;
+}
+.next{
+    position: absolute;
+    right:35%;
+}
+.top_header span i:hover{
+    cursor: pointer;
+    scale: 1.2;
+    color: #fff;
+    transition: all 0.3s ease;
+}
 
 header .main_header {
     display: flex;
     justify-content: space-around;
+    font-size: 14px;
+    padding: 0px 4%;
 }
 
 header .main_header .nav1 {
@@ -27,9 +81,9 @@ header .main_header .nav1 .active {
     border-bottom: 1px solid black;
 }
 
-header .main_header .nav1 .active:hover {
+/* header .main_header .nav1 .active:hover {
     border-bottom: 3px solid black;
-}
+} */
 
 header .main_header .nav1 a {
     color: rgb(61, 61, 61);
@@ -55,4 +109,175 @@ header .main_header .nav3 a i {
 header .main_header .nav3 a i:hover {
     transform: scale(1.1);
     transition: all 0.1s ease;
+}
+
+section{
+    width: 100%;
+    height: 120vh;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background :linear-gradient(#323030 #363535);
+}
+.parallax{
+    width: 100%;
+    height: 100%;
+    background: url("../img/OZBE.jpg");
+    background-position: top;
+    background-size: cover;
+}
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;    
+}
+.snova-v-igre{
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    text-align: center;
+}
+.snova-v-igre p{
+    color: #ffff;
+    font-size: 52px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 100;
+    margin-bottom: 3%;
+}
+.snova-v-igre button{
+    width: 122px;
+    height: 47px;   
+    padding-left: 30px;
+    padding-right: 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.snova-v-igre button:hover{
+    border: 3px solid #fff;;
+}
+.section-two{
+    width: 100%;
+    height: 100vh;
+    color:#000;
+    padding: 10px 0 0 12%;
+    scrollbar-width: none;
+    overflow-x: scroll;
+}
+.header-section-two p{
+    padding: 10px 0 0 12%;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.box-card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
+.card{
+    position: relative;
+    width: 305px;
+    height: 453px;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+
+}
+ .card img{
+    width: 100%;
+    transition: all linear 0.2s;
+    overflow: hidden;
+
+} 
+
+.hover-img{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    opacity: 0;
+    /* display: none; */
+}
+.card:hover .hover-img1{
+    opacity: 0;
+}
+.cards:hover img.hover-img{
+    /* display: block; */
+    opacity: 1;
+    transform: scale(1.08);
+    cursor: pointer;
+} 
+.cards{
+    width: 320px;
+    height: auto;
+    /* background-color: #323030; */
+    display: inline-block;
+}
+.card-content{
+    width: 100%;
+    color: #000;
+    grid-template-rows: max-content minmax(0,1fr) max-content auto;
+    text-align: center;
+}
+.card-information ,
+.card-price{
+    padding: 0 12px;
+}
+.card-information h3,
+.card-information a{
+    font-size: 15px;
+    color: #000;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    margin-top: 1.2rem;
+}
+.card-price p{
+    line-height: 50px;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+
+}
+.card-content button{
+    width: 90%;
+    padding: 10px;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    background: transparent;
+    border: 1px solid #000;
+}
+.cards:hover {
+    cursor: pointer;
+}
+.cards:hover .card-information h3 a{
+    text-decoration:underline !important;
+}
+.card-content button:hover{
+    border: 2px solid #000;
+}
+.counter{
+    display: flex;
+    align-items: center;
+    left: 38%;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+}
+.counter i{
+    color: #ccc;
+    font-size: 12px;
+}
+.counter p{
+    color: #8e8d8d;
+    margin-left: 40px;
+    margin-right: 40px;
 }

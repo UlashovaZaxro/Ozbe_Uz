@@ -1,28 +1,28 @@
-let prev = document.querySelector('.prev');
+        let prev = document.querySelector('.prev');
         let next = document.querySelector('.next');
-        let img = document.querySelectorAll('.slider-img img');
-        
-        console.log(prev);
-        console.log(next);
-        console.log(img);
-        let i = 0;
+        let text1 =  document.querySelector('.top-header-text-one');
+        let text2 =  document.querySelector('.top-header-text-two');
+    
+        const bgimg = document.querySelector('.parallax');
+        const section = document.querySelector('section');
+        window.addEventListener('scroll', function () {
+           var scales = bgimg.style.scale = 100 + window.pageYOffset / 45 + "%";})
 
-        next.onclick = function () {
-            img[i].style.display = 'none'
-            i++
-            if(i >= img.length){
-                i = 0;
-            }
-            console.log(i)
-            img[i].style.display = 'block'
-        }
-        prev.onclick = function () {
-            img[i].style.display = 'none'
-            i--
-            if(i == -1){
-                i = img.length - 1
-            }
-            console.log(i)
-            img[i].style.display = 'block'
-        }
-        console.log(img);
+// ----------------------------------------------------------------------------
+
+prev.addEventListener('click', () => {
+    text1.classList.add('active');
+    console.log('ishlayabdi');
+    text2.classList.add('active');
+    text1.style.display = 'none';
+
+});
+prev.addEventListener('click', () => {
+});
+next.addEventListener('click', () => {
+    text2.classList.remove('active');
+    text1.style.display = 'block';
+});
+
+
+
