@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Tilt+Neon&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+header .top_header {
+    background-color: #334fb4;
+    color: #ffff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-header-text-one {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+    display: block;
+}
+
+.top-header-text-one.active {
+    transition: all 0.50s ease-in;
+    display: block;
+}
+
+.top-header-text-two {
+    display: none;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+
+}
+
+.top-header-text-two.active {
+    display: block;
+    transition: all 0.50s ease-in
+}
+
+.top_header span i {
+    font-size: 12px;
+    color: gray;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.prev {
+    position: absolute;
+    left: 35%;
+}
+
+.next {
+    position: absolute;
+    right: 35%;
+}
+
+.top_header span i:hover {
+    cursor: pointer;
+    scale: 1.2;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+header .main_header {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    padding: 0px 4%;
+}
+
+header .main_header .nav1 {
+    display: flex;
+    margin-left: -30px;
+}
+
+header .main_header .nav1 .active {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+header .main_header .nav1 a {
+    color: rgb(61, 61, 61);
+    margin: 40px 15px;
+    font-weight: 500;
+}
+
+header .main_header .nav1 a:hover {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+header .main_header .nav2 img {
+    width: 100px;
+    margin: 25px 0 25px -140px;
+}
+
+header .main_header .nav3 a i {
+    color: black;
+    margin: 40px 10px;
+}
+
+header .main_header .nav3 a i:hover {
+    transform: scale(1.1);
+    transition: all 0.1s ease;
+}
+section{
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 10px 15%;
+    margin-bottom: 40px;
+}
+.header-section{
+    padding-top: 1.8rem;
+    font-size: 28px;
+}
+
+.header-section h1{
+    font-weight: 200;
+}
+.filters{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.facetWrapper{
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: space-around
+}
+.facetWrapper h2{
+    font-size: 16px;
+    font-weight: 100;
+}
+.availability > input{
+    display: none;
+}
+.availability{
+    margin-left: 15px;
+}
+.card-box{
+    width: 100%;
+    height: 100%;
+    padding: 10px 15%;
+    padding-right: 0;
+}
+.box-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+}
+.card {
+    position: relative;
+    width: 270px;
+    height: 400px;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    transition: all linear 0.2s;
+}
+.cards:hover img.hover-img {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.cards {
+    width: 280px;
+    height: auto;
+    display: inline-block;
+}
+
+.card-content {
+    width: 100%;
+    color: #000;
+    grid-template-rows: max-content minmax(0, 1fr) max-content auto;
+    text-align: center;
+}
+.card-information,
+.card-price {
+    padding: 0 12px;
+}
+
+.card-information h3,
+.card-information a {
+    font-size: 15px;
+    color: #000;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    margin-top: 1.2rem;
+}
+
+.card-price p {
+    line-height: 50px;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+
+}
+
+.cards:hover {
+    cursor: pointer;
+}
+
+.cards:hover .card-information h3 a {
+    text-decoration: underline !important;
+}
+
+
+.footure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    font-size: 20px;
+}
+.icons a{
+  color: #000;
+}
+.icons i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.link ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    list-style: inside;
+}
+
+.link ul li a {
+    color: #323030;
+    padding: 10px;
+}
+
+.link ul li a:hover {
+    text-decoration: underline;
+}
